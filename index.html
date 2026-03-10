@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <!-- Configuración para la vista previa de WhatsApp -->
+<meta property="og:title" content="Menudencia de Pollo Higienizada | Fresh & Clean Bogotá">
+<meta property="og:description" content="Menudencias frescas, limpias y picadas a domicilio en Bogotá. Calidad e higiene garantizada.">
+<meta property="og:image" content="https://parchadosbogota.github.io/prueba/img/logo.png">
+<meta property="og:image:alt" content="Logo Fresh & Clean">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://parchadosbogota.github.io/prueba/">
+
+<!-- Etiquetas adicionales para asegurar que funcione -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://parchadosbogota.github.io/prueba/img/logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menudencia de Pollo Higienizada | Pollos GyM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --aguamarina: #20B2AA; 
+            --aguamarina-claro: #E0F2F1;
+            --negro: #1a1a1a;
+            --blanco: #ffffff;
+            --gris-fondo: #f4f7f6;
+            --whatsapp: #25d366;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+            background-color: var(--gris-fondo);
+            background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+            color: var(--negro);
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; font-weight: 800; }
+
+   /* HEADER & NAV RESPONSIVO */
+        header {
+            background: var(--blanco);
+            padding: 10px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 2000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            border-bottom: 4px solid var(--aguamarina);
+            height: 80px; /* Altura fija para control */
+        }
+
+        .logo img { 
+            height: 70px; /* Tamaño para PC */
+            width: auto; 
+            transition: 0.3s;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--negro);
+            font-weight: 800;
+            margin-left: 25px; /* Espacio en PC */
+            transition: all 0.3s ease;
+            font-size: 1.1rem; /* Tamaño en PC */
+            text-transform: uppercase;
+            position: relative;
+            white-space: nowrap; /* Evita que el texto se rompa en dos líneas */
+        }
+
+        nav a:hover {
+            color: var(--aguamarina);
+        }
+
+        /* Línea decorativa inferior */
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--aguamarina);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* AJUSTE PARA PANTALLAS MÓVILES (Celulares) */
+        @media (max-width: 768px) {
+            header {
+                padding: 0 3%;
+                height: 70px; /* Header un poco más delgado en móvil */
+            }
+
+            .logo img {
+                height: 50px; /* Logo más pequeño en móvil */
+            }
+
+            nav a {
+                margin-left: 12px; /* Reducimos el espacio entre botones */
+                font-size: 0.75rem; /* Letra más pequeña para que quepa todo */
+                font-weight: 700;
+            }
+
+            /* Reducimos el espacio superior del cuerpo para el móvil */
+            body {
+                padding-top: 80px;
+            }
+        }
+
+        /* Ajuste para el cuerpo en PC */
+        body {
+            padding-top: 100px;
+        }
+
+        /* SLIDER */
+        .slider-container {
+            position: relative;
+            height: 450px;
+            overflow: hidden;
+            border-bottom: 10px solid var(--aguamarina);
+        }
+
+        .slides {
+            display: flex;
+            width: 700%;
+            height: 100%;
+            animation: slide 25s infinite ease-in-out;
+        }
+
+        .slides img {
+            width: 14.28%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.5);
+        }
+
+        @keyframes slide {
+            0% { margin-left: 0; }
+            14% { margin-left: 0; }
+            15% { margin-left: -100%; }
+            29% { margin-left: -100%; }
+            30% { margin-left: -200%; }
+            44% { margin-left: -200%; }
+            45% { margin-left: -300%; }
+            59% { margin-left: -300%; }
+            60% { margin-left: -400%; }
+            74% { margin-left: -400%; }
+            75% { margin-left: -500%; }
+            89% { margin-left: -500%; }
+            90% { margin-left: -600%; }
+            100% { margin-left: -600%; }
+        }
+
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            width: 90%;
+            z-index: 10;
+        }
+
+        .hero-content h1 { font-size: 2.8rem; text-transform: uppercase; margin-bottom: 10px; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
+
+        /* SECCIÓN QUIÉNES SOMOS, MISIÓN Y VISIÓN */
+        .nosotros-section {
+            padding: 80px 10%;
+            background: white;
+        }
+
+        .quienes-somos-texto {
+            max-width: 900px;
+            margin: 0 auto 50px auto;
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .quienes-somos-texto h2 {
+            color: var(--aguamarina);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .mv-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .mv-card {
+            background: var(--gris-fondo);
+            padding: 40px;
+            border-radius: 30px;
+            border-left: 8px solid var(--aguamarina);
+            transition: 0.3s;
+        }
+
+        .mv-card h3 {
+            color: var(--aguamarina);
+            font-size: 1.8rem;
+            margin-top: 0;
+        }
+
+        /* BOTONES */
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background: var(--aguamarina);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s;
+            border: none;
+            box-shadow: 0 4px 15px rgba(32, 178, 170, 0.4);
+            margin: 10px;
+        }
+
+        .btn:hover { background: var(--negro); transform: scale(1.05); color: var(--aguamarina); }
+
+        .btn-wa-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: var(--whatsapp);
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 35px;
+            z-index: 2000;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            text-decoration: none;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        /* SECCIONES GENERALES */
+        section { padding: 80px 10%; text-align: center; }
+
+        .bg-aguamarina { background: var(--aguamarina-claro); border-radius: 50px 50px 0 0; }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: var(--blanco);
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-bottom: 5px solid var(--aguamarina);
+            transition: 0.3s;
+        }
+
+        .card:hover { transform: translateY(-10px); }
+
+        .card img { width: 100%; height: 220px; object-fit: cover; border-radius: 15px; margin-bottom: 15px; }
+
+        /* ESTILOS PARA EL MAPA */
+        .map-section { padding: 60px 5%; background: var(--blanco); }
+        .map-wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+            border: 8px solid var(--aguamarina-claro);
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            line-height: 0;
+        }
+        .map-wrapper iframe { width: 100%; height: 450px; border: 0; }
+
+        /* FORMULARIO */
+        #formulario { background: var(--negro); color: white; padding: 60px 5%; border-radius: 40px; margin: 40px 5%; }
+        #formulario h2 { color: var(--aguamarina); }
+        form { max-width: 500px; margin: 30px auto; display: flex; flex-direction: column; gap: 15px; }
+        input, select, textarea { padding: 15px; border-radius: 10px; border: none; font-size: 1rem; }
+
+        footer { background: var(--blanco); padding: 40px; text-align: center; border-top: 5px solid var(--aguamarina); }
+
+    </style>
+</head>
+<body>
+
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/573134614410" class="btn-wa-float" target="_blank">🟢</a>
+
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo Higienizados">
+        </div>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#productos">Productos</a>
+            <a href="#formulario">Mayoristas</a>
+        </nav>
+    </header>
+
+    <!-- HERO SLIDER -->
+    <div class="slider-container" id="inicio">
+        <div class="slides">
+            <img src="img/seccion1.jpg">
+            <img src="img/seccion2.jpg">
+            <img src="img/seccion3.jpg">
+            <img src="img/seccion4.jpg">
+            <img src="img/seccion5.jpg">
+            <img src="img/seccion6.jpg">
+            <img src="img/seccion7.jpg">
+        </div>
+        <div class="hero-content">
+            <h1>Menudencia de Pollo <span style="color:var(--aguamarina)">100% Limpia</span></h1>
+            <p>Directo de la planta a tu cocina en Bogotá. Ahorra tiempo y asegura salud.</p>
+            <a href="https://wa.me/573134614410" class="btn">¡PEDIR POR WHATSAPP!</a>
+        </div>
+    </div>
+
+    <!-- NUEVA SECCIÓN: QUIÉNES SOMOS, MISIÓN Y VISIÓN -->
+    <section class="nosotros-section" id="nosotros">
+        <div class="quienes-somos-texto">
+            <h2>Quiénes Somos</h2>
+            <p>
+                En <strong>Pollos GyM</strong>, somos apasionados por llevar a la mesa de los bogotanos lo mejor de nuestras tradiciones con un estándar de modernidad y limpieza superior. Nos especializamos en la comercialización de <strong>menudencias tradicionales colombianas</strong>, rescatando su valor nutritivo pero eliminando el trabajo pesado en la cocina. 
+            </p>
+            <p>
+                Nos diferenciamos por ofrecer un producto con <strong>higiene y limpieza garantizada</strong>, entregando cada pieza <strong>lista para cocinar</strong> (limpia y picada). Creemos que la calidad no debe ser un lujo, por eso mantenemos el <strong>mejor precio por kilo en Bogotá</strong>, convirtiéndonos en el aliado estratégico tanto para hogares como para <strong>restaurantes y tiendas</strong> que buscan opciones al por mayor con total confianza y frescura.
+            </p>
+        </div>
+
+        <div class="mv-container">
+            <div class="mv-card">
+                <h3>Nuestra Misión</h3>
+                <p>“Proveer menudencias de pollo frescas, higiénicas y nutritivas a hogares y negocios en Bogotá, ofreciendo productos de calidad que respeten la tradición culinaria colombiana a precios accesibles, con un servicio confiable y cercano.”</p>
+            </div>
+            <div class="mv-card">
+                <h3>Nuestra Visión</h3>
+                <p>“Ser la pollería líder en productos de menudencia en Bogotá, reconocida por su calidad, seguridad alimentaria, precios competitivos y compromiso con la nutrición y la satisfacción de nuestros clientes, expandiendo nuestra presencia y diversificando nuestras ofertas antes del 2030.”</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFICIOS -->
+    <section class="bg-aguamarina">
+        <h2>¿Por qué elegir nuestro producto?</h2>
+        <div class="card-container">
+            <div class="card" style="border-bottom-color: var(--negro);">
+                <span style="font-size:3rem">🧼</span>
+                <h3>Doble Lavado</h3>
+                <p>Procesado con agua purificada y estándares de inocuidad.</p>
+            </div>
+            <div class="card">
+                <span style="font-size:3rem">🔪</span>
+                <h3>Lista para la olla</h3>
+                <p>Te la entregamos picada y seleccionada. Sin desperdicios.</p>
+            </div>
+            <div class="card" style="border-bottom-color: var(--negro);">
+                <span style="font-size:3rem">❄️</span>
+                <h3>Cadena de Frío</h3>
+                <p>Garantizamos la frescura total desde el origen hasta tu puerta.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIDEO -->
+    <section>
+        <h2 style="color: var(--negro);">Nuestro Proceso Profesional</h2>
+        <p>Transparencia total en lo que llevas a tu mesa.</p>
+        <div class="video-box" style="max-width: 800px; margin: 0 auto; border: 8px solid white; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+            <video width="100%" controls>
+                <source src="img/proceso.mp4" type="video/mp4">
+                Tu navegador no soporta video.
+            </video>
+        </div>
+    </section>
+
+    <!-- PRODUCTOS -->
+    <section id="productos" class="bg-aguamarina" style="border-radius: 50px;">
+        <h2>Catálogo de Frescura</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="img/producto1.jpg">
+                <h3>Patas de Pollo</h3>
+                <p>Limpias, sin uñas, ricas en colágeno.</p>
+                <h3>$2.000 libra</h3>
+                <a href="https://wa.me/573134614410" class="btn">Pedir ahora</a>
+            </div>
+            <div class="card">
+                <img src="img/producto2.jpg">
+                <h3>Hígado Seleccionado</h3>
+                <p>Fresco del día, ideal para nutrición fuerte.</p>
+                <h3>$2.000 libra</h3>
+                <a href="https://wa.me/573134614410" class="btn">Pedir ahora</a>
+            </div>
+            <div class="card">
+                <img src="img/producto3.jpg">
+                <h3>Mix Menudencia</h3>
+                <p>El combo perfecto para tus sopas y caldos.</p>
+                <h3>$2.000 libra</h3>
+                <a href="https://wa.me/573134614410" class="btn">Pedir ahora</a>
+            </div>
+            <div class="card">
+                <img src="img/producto4.jpg">
+                <h3>Molleja y Corazon</h3>
+                <p>Importantes para energía y salud general.</p>
+                <h3>$4.500 libra</h3>
+                <a href="https://wa.me/573134614410" class="btn">Pedir ahora</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- UBICACIÓN -->
+    <section class="map-section">
+        <div class="location-info">
+            <h2>Visítanos en Nuestra Planta</h2>
+            <p>📍 Bogotá, Colombia - Calidad y Limpieza a tu alcance</p>
+        </div>
+        <div class="map-wrapper">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.845946399996!2d-74.1337482!3d4.6215752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f994762393351%3A0x6b80457635c91107!2sDistribuidora%20de%20pollo%20de%20la%20sabana!5e0!3m2!1ses!2sco!4v1715809000000!5m2!1ses!2sco" 
+                allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- FORMULARIO -->
+    <section id="formulario">
+        <h2>¿Ventas al por mayor?</h2>
+        <p>Si tienes un restaurante o negocio, tenemos precios especiales para ti.</p>
+        <form>
+            <input type="text" placeholder="Tu Nombre o Negocio" required>
+            <input type="tel" placeholder="WhatsApp" required>
+            <select>
+                <option>¿Qué producto te interesa?</option>
+                <option>Pata</option>
+                <option>Hígado</option>
+                <option>Combo Mixto</option>
+                <option>Todo el catálogo</option>
+            </select>
+            <textarea placeholder="¿Cuántas libras o kilos necesitas semanalmente?" rows="4"></textarea>
+            <button type="submit" class="btn">SOLICITAR LISTA DE PRECIOS</button>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <img src="img/logo.png" alt="Logo" style="height: 120px; margin-bottom: 10px;">
+        <p><strong>Menudencias Higienizadas Bogotá</strong></p>
+        <p>📍 Entregas en toda la zona metropolitana</p>
+        <p>📞 Contacto: +573134614410</p>
+        <div style="margin-top: 20px; font-size: 0.8rem; opacity: 0.6;">
+            &copy; 2024 Todos los derechos reservados.
+        </div>
+    </footer>
+
+</body>
+</html>
